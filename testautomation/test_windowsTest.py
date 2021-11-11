@@ -3,6 +3,7 @@ import platform
 import pytest
 import pytest_html
 from pytest_html import extras
+import datetime
 
 import os
 from pathlib import Path
@@ -35,9 +36,11 @@ def test_TowelsLoginMediaScanLogout():
 
     time.sleep(1)
 
-    driver.save_screenshot("./results/loginImg.png")
+    dts = datetime.datetime.now().strftime("%Y_%m_%d-%I:%M:%S_%p")
 
-    extras.image("./results/loginImg.png")
+    driver.save_screenshot("./results/loginImg_" + dts + ".png")
+
+    extras.image("./results/loginImg.png_" + dts + ".png")
 
     element = driver.find_elements_by_xpath("/html/body/div/login/div/div[3]/div[8]/button")[0]
     element.click()
@@ -49,7 +52,7 @@ def test_TowelsLoginMediaScanLogout():
     time.sleep(2)
 
     print('Insert to Body')
-    driver.save_screenshot("./results/scanMedia.png")
+    driver.save_screenshot("./results/scanMedia_" + dts + ".png")
 
     #import keyboard
     #keyboard.write('048B0F7A835084')
@@ -59,7 +62,7 @@ def test_TowelsLoginMediaScanLogout():
     element.send_keys("048B0F7A835084")
     element.send_keys(keys.Keys.ENTER)
     time.sleep(2)
-    driver.save_screenshot("./results/wrongscanMedia.png")
+    driver.save_screenshot("./results/wrongscanMedia_" + dts + ".png")
 
     #exit Button
     time.sleep(5)
@@ -67,7 +70,7 @@ def test_TowelsLoginMediaScanLogout():
     element.click()
 
     time.sleep(2)
-    driver.save_screenshot("./results/logoutSuccessful.png")
+    driver.save_screenshot("./results/logoutSuccessful_" + dts + ".png")
 
 
     time.sleep(1)
