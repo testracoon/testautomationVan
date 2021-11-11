@@ -46,6 +46,7 @@ jobs:
       run: |
         pwd
         ls -ltr
+        cp /results/towels_report.html /downloads/towels_report.html
         cd downloads
         echo 'alpha'    > alpha.html
         echo 'bravo'    > bravo.html
