@@ -40,7 +40,7 @@ def test_TowelsLoginMediaScanLogout():
 
     driver.save_screenshot("./results/loginImg_" + dts + ".png")
 
-    extras.image("./results/loginImg.png")
+
 
     element = driver.find_elements_by_xpath("/html/body/div/login/div/div[3]/div[8]/button")[0]
     element.click()

@@ -11,6 +11,8 @@ from pathlib import Path
 platformtype = pytest.mark.skipif(platform.system() == 'Darwin' or platform.system() == 'Windows', reason="Linux")
 folder_path = str(Path(__file__).parents[0])
 
+#Aliiance must be forge
+
 @platformtype
 def test_TowelsLoginMediaScanLogout():
     from selenium import webdriver
