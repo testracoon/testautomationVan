@@ -38,4 +38,21 @@ jobs:
     - name: Test with pytest
       run: |
         pytest -s -v --capture=sys --html=./results/towels_report.html
+        
+    - name: Step 1 - Create a temporary artifact downloads folder
+      run: mkdir downloads
+        
+    - name: step 2 - Add artifacts to publish to the temp folder
+      run: |
+        pwd
+        ls -ltr
+        cp -a /home/runner/work/testautomationVan/testautomationVan/results/. /home/runner/work/testautomationVan/testautomationVan/downloads/
+        cd downloads
+        cd ..
+    
+    - name: Step 3 - Use the Upload Artifact GitHub Action
+      uses: actions/upload-artifact@v2
+      with: 
+        name: assets-for-download
+        path: downloads
 
