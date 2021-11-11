@@ -46,11 +46,8 @@ jobs:
       run: |
         pwd
         ls -ltr
-        cp /home/runner/work/testautomationVan/testautomationVan/results/towels_report.html /home/runner/work/testautomationVan/testautomationVan/downloads/towels_report.html
+        cp -a /home/runner/work/testautomationVan/testautomationVan/results/. /home/runner/work/testautomationVan/testautomationVan/downloads/
         cd downloads
-        echo 'alpha'    > alpha.html
-        echo 'bravo'    > bravo.html
-        echo 'charlie'  > charlie.html
         cd ..
     
     - name: Step 3 - Use the Upload Artifact GitHub Action
