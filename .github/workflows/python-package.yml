@@ -44,11 +44,12 @@ jobs:
         
     - name: step 2 - Add artifacts to publish to the temp folder
       run: |
+        pwd
+        ls -ltr
         cd downloads
         echo 'alpha'    > alpha.html
         echo 'bravo'    > bravo.html
         echo 'charlie'  > charlie.html
-        cp ./results/towels_report.html towels_report.html
         cd ..
     
     - name: Step 3 - Use the Upload Artifact GitHub Action
