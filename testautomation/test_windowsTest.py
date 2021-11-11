@@ -36,7 +36,7 @@ def test_TowelsLoginMediaScanLogout():
 
     time.sleep(1)
 
-    dts = datetime.datetime.now().strftime("%Y_%m_%d-%I:%M:%S_%p")
+    dts = datetime.datetime.now().strftime("%Y_%m_%d_%I%M%S%p")
 
     driver.save_screenshot("./results/loginImg_" + dts + ".png")
 
