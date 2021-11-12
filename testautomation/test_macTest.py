@@ -55,7 +55,7 @@ def test_TowelsLoginMediaScanLogout():
     time.sleep(1)
     driver.save_screenshot("./results/scanMedia_" + dts + ".png")
     element = driver.find_element_by_tag_name('body')
-    element.send_keys("04 13 03 7a 83 50 85")
+    element.send_keys("04 ac 0d 7a 83 50 84")
     time.sleep(1)
     print('sending ', 'enter')
     element.send_keys(keys.Keys.ENTER)
@@ -76,11 +76,13 @@ def test_TowelsLoginMediaScanLogout():
     element = driver.find_elements_by_xpath("/html/body/div/issue-towels/div/div[7]/button")[0]
     element.click()
 
+    time.sleep(3)
+
 
     #/html/driver.save_screenshot("./results/towelAssign2Pieces" + dts + ".png")body/div/issue-towels/div/div[15]/button
     element = driver.find_elements_by_xpath("/html/body/div/issue-towels/div/div[15]/button")[0]
     element.click()
-    time.sleep(2)
+    time.sleep(3)
 
     #Logout
     driver.save_screenshot("./results/towelAssignedLogout" + dts + ".png")
