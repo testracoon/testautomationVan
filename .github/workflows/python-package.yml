@@ -42,7 +42,7 @@ jobs:
       
     - name: Test with pytest
       run: |
-        pytest -s -v --capture=sys --html=./results/towels_report.html
+        pytest -s -v --capture=sys --html=./results/webapp_report.html
         
     - name: Step 1 - Create a temporary artifact downloads folder
       run: mkdir downloads
