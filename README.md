@@ -1,2 +1,2 @@
 # testautomationVan
-[![Python package](https://github.com/testracoon/testautomationVan/actions/workflows/python-package.yml/badge.svg)]
+[![WebApp Test](https://github.com/testracoon/testautomationVan/actions/workflows/python-package.yml/badge.svg)]
